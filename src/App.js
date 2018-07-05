@@ -25,6 +25,7 @@ class App extends React.Component {
     fetch(`https://hn.algolia.com/api/v1/search?query=$value`)
       .then(response => response.json())
       .then(result => this.onSetResult(result, value));
+      
   }
 
   onSetResult = (result, key) => {
