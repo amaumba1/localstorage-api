@@ -22,7 +22,7 @@ class App extends React.Component {
       return;
     }
 
-    fetch(`https://hn.algolia.com/api/v1/search?query=$value`)
+    fetch(`https://hn.algolia.com/api/v1/search?query=$value`)    
       .then(response => response.json())
       .then(result => this.onSetResult(result, value));
       
@@ -44,7 +44,7 @@ class App extends React.Component {
         </form>
         {
           this.state.hits &&
-          this.state.hits.map(item => <div key={item.objectID}>{item.title}</div>)
+          this.state.hits.map(item => <div key={item.nopd_}>{item.title}</div>)
         }
       </div>
     );
